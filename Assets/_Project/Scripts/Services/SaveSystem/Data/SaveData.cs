@@ -1,5 +1,6 @@
 [System.Serializable]
-public class MoneySaveData
+public class SaveData
 {
+    public string playerName;
     public int currentMoney;
 }

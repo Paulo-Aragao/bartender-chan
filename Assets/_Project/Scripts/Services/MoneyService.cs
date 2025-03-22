@@ -48,9 +48,9 @@ public class MoneyService : Service
     public void Load()
     {
         SaveService saveService = ServiceLocator.Get<SaveService>();
-        if (saveService.Exists("MoneySaveData"))
+        if (saveService.Exists("SaveData"))
         {
-            MoneySaveData data = saveService.Load<MoneySaveData>("MoneySaveData");
+            SaveData data = saveService.Load<SaveData>("SaveData");
             _currentMoney = data.currentMoney;
             OnMoneyChanged?.Invoke(_currentMoney);
         }
@@ -64,8 +64,8 @@ public class MoneyService : Service
     public void Save()
     {
         SaveService saveService = ServiceLocator.Get<SaveService>();
-        MoneySaveData data = new MoneySaveData { currentMoney = _currentMoney };
-        saveService.Save(data, "MoneySaveData");
+        SaveData data = new SaveData { currentMoney = _currentMoney };
+        saveService.Save(data, "SaveData");
     }
     #endregion
 }

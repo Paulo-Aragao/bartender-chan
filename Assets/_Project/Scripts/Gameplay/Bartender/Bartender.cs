@@ -15,6 +15,13 @@ public class Bartender : MonoBehaviour
         ChangeState(new IdleState());
     }
     [Button]
+    public void Shake() => ChangeState(new ShakingState());
+    [Button]
+    public void Success() => ChangeState(new SuccessState());
+    [Button]
+    public void Failed() => ChangeState(new FailedState());
+    [Button]
+    public void Idle() => ChangeState(new IdleState());
     public void ChangeState(BartenderState newState)
     {
         currentState = newState;

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f787436715f118b4db1c73f395300407
+guid: 0a35f1a6f2855d342aeaeadddddcec08
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,112 +108,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: bartender-shake_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 512
-        width: 441
-        height: 514
-      alignment: 9
-      pivot: {x: 0.53, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a534cd80a8d141f4fba9882a79acae53
-      internalID: -1552895540
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bartender-shake_1
-      rect:
-        serializedVersion: 2
-        x: 441
-        y: 514
-        width: 441
-        height: 514
-      alignment: 9
-      pivot: {x: 0.53, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0732d50da8da89744a30d72c231673d0
-      internalID: 225435500
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bartender-shake_2
-      rect:
-        serializedVersion: 2
-        x: 882
-        y: 514
-        width: 441
-        height: 514
-      alignment: 9
-      pivot: {x: 0.53, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16e268d373278454a9f830502464793d
-      internalID: -1100950486
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bartender-shake_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 441
-        height: 514
-      alignment: 9
-      pivot: {x: 0.53, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16f787c06a7a56543a6aa91fc080f22e
-      internalID: 426339696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bartender-shake_4
-      rect:
-        serializedVersion: 2
-        x: 441
-        y: 0
-        width: 441
-        height: 514
-      alignment: 9
-      pivot: {x: 0.53, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78a582b27e836094ba59c9c6ba81ed1e
-      internalID: -809517104
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -224,12 +119,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      bartender-shake_0: -1552895540
-      bartender-shake_1: 225435500
-      bartender-shake_2: -1100950486
-      bartender-shake_3: 426339696
-      bartender-shake_4: -809517104
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

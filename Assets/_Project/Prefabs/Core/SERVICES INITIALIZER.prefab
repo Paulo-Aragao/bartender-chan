@@ -45,4 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _services:
+  - {fileID: 11400000, guid: d075eb134651305449b51de357e0c92d, type: 2}
   - {fileID: 11400000, guid: 59f3b9fe800ee904e883080da67b828b, type: 2}
+  allServicesRegisteds:
+    m_PersistentCalls:
+      m_Calls: []

@@ -12,11 +12,11 @@ public static class ServiceLocator
         if (!_services.ContainsKey(key))
         {
             _services.Add(key, service);
-            Debug.Log("Service " + key + " is registered.");
+            Debug.Log($"Service " + key + " is registered.");
         }
         else
         {
-            Debug.LogWarning("Service " + key + " is was already registered.");
+            Debug.LogWarning($"Service " + key + " is was already registered.");
         }
     }
 
@@ -28,7 +28,7 @@ public static class ServiceLocator
             return (T)service;
         }
 
-        Debug.LogError($"Service {type} not found.");
+        Debug.LogError("Service " + type + " not found. Check the list of services and if the boot order is correct");
         return null;
     }
 

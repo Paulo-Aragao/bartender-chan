@@ -14,8 +14,13 @@ public class MoneyService : Service
     public override void Init()
     {
         Load();
+        Debug.Log("Money Service is initialized.");
     }
 
+    public int GetCurrentMoney()
+    {
+        return _currentMoney;
+    }
     public void Add(int amount)
     {
         _currentMoney += amount;
@@ -42,9 +47,10 @@ public class MoneyService : Service
     #region SaveSystem
     public void Load()
     {
-        if (SaveSystem.Exists("MoneySaveData"))
+        SaveService saveService = ServiceLocator.Get<SaveService>();
+        if (saveService.Exists("MoneySaveData"))
         {
-            MoneySaveData data = SaveSystem.Load<MoneySaveData>("MoneySaveData");
+            MoneySaveData data = saveService.Load<MoneySaveData>("MoneySaveData");
             _currentMoney = data.currentMoney;
             OnMoneyChanged?.Invoke(_currentMoney);
         }
@@ -57,8 +63,9 @@ public class MoneyService : Service
 
     public void Save()
     {
+        SaveService saveService = ServiceLocator.Get<SaveService>();
         MoneySaveData data = new MoneySaveData { currentMoney = _currentMoney };
-        SaveSystem.Save(data, "MoneySaveData");
+        saveService.Save(data, "MoneySaveData");
     }
     #endregion
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _Project.Scripts.Utils
+namespace PauloAragao.Utils
 {
     [AddComponentMenu("Hierarchy Tools/Hierarchy Separator")]
     public class HierarchySeparator : MonoBehaviour

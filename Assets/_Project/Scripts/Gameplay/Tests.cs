@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Service : ScriptableObject
+public class Tests : MonoBehaviour
 {
-    public abstract void Init();
+    //public void Sa
 }

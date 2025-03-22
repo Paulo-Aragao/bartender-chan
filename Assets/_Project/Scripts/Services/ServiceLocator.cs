@@ -6,15 +6,18 @@ public static class ServiceLocator
 {
     private static readonly Dictionary<Type, Service> _services = new();
 
-    public static void Register<T>(T service) where T : Service
+    public static void Register(Service service)
     {
-        var type = typeof(T);
-        if (_services.ContainsKey(type))
+        Type key = service.GetType();
+        if (!_services.ContainsKey(key))
         {
-            Debug.LogWarning($"The service {type} was already registered, it will be replaced.");
+            _services.Add(key, service);
+            Debug.Log("Serviço " + key + " registrado.");
         }
-
-        _services[type] = service;
+        else
+        {
+            Debug.LogWarning("Serviço " + key + " já está registrado.");
+        }
     }
 
     public static T Get<T>() where T : Service

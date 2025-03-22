@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6558103405662542637}
   - component: {fileID: 7342662276835394439}
   m_Layer: 0
-  m_Name: SERVICES MANAGER
+  m_Name: SERVICES INITIALIZER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

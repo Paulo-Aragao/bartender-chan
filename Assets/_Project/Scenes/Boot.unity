@@ -224,6 +224,53 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &113101173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 113101175}
+  - component: {fileID: 113101174}
+  m_Layer: 0
+  m_Name: SCENE CONTROLLER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &113101174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113101173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8dfe4e3249202845a1b454daa88784c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnSceneLoadProgress:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &113101175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113101173}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 226.64952, y: 141.69263, z: -1.3171479}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &163620188
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,6 +495,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationInterval: 0.3
+--- !u!114 &249491824 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7342662276835394439, guid: ad4c26f60824afb4d94d4b4332e36c87, type: 3}
+  m_PrefabInstance: {fileID: 1613021808}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b96c7e9e8f476a4dac5389c88d72077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &745128575
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,6 +664,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1521196001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1521196003}
+  - component: {fileID: 1521196002}
+  m_Layer: 0
+  m_Name: BOOT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1521196002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521196001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eb94946edf8be843b9fb2d38cbb0fbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dependenciesToBoot:
+  - {fileID: 249491824}
+  nextSceneName: Game
+--- !u!4 &1521196003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521196001}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 226.64952, y: 141.69263, z: -1.3171479}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1613021808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -654,17 +759,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7342662276835394439, guid: ad4c26f60824afb4d94d4b4332e36c87, type: 3}
-      propertyPath: _services.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7342662276835394439, guid: ad4c26f60824afb4d94d4b4332e36c87, type: 3}
-      propertyPath: _services.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 59f3b9fe800ee904e883080da67b828b, type: 2}
     - target: {fileID: 7648026562299232020, guid: ad4c26f60824afb4d94d4b4332e36c87, type: 3}
       propertyPath: m_Name
-      value: SERVICES MANAGER
+      value: SERVICES INITIALIZER
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -773,3 +870,5 @@ SceneRoots:
   - {fileID: 1403778844}
   - {fileID: 745128577}
   - {fileID: 1613021808}
+  - {fileID: 1521196003}
+  - {fileID: 113101175}

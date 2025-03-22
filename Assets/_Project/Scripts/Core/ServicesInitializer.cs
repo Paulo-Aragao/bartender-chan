@@ -2,13 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class ServiceInitializer : MonoBehaviour
+public class ServicesInitializer : MonoBehaviour, IBootDependency
 {
     
     [SerializeField] private List<Service> _services;
+    
+    [SerializeField] private UnityEvent allServicesRegisteds;
+    public UnityEvent OnReady => allServicesRegisteds;
 
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private void OnEnable()
     {
         InitializeServices();
@@ -20,5 +23,7 @@ public class ServiceInitializer : MonoBehaviour
         {
             ServiceLocator.Register(service);
         }
+
+        allServicesRegisteds?.Invoke();
     }
 }

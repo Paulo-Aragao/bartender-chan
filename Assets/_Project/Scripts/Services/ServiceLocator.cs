@@ -12,11 +12,11 @@ public static class ServiceLocator
         if (!_services.ContainsKey(key))
         {
             _services.Add(key, service);
-            Debug.Log("Serviço " + key + " registrado.");
+            Debug.Log("Service " + key + " is registered.");
         }
         else
         {
-            Debug.LogWarning("Serviço " + key + " já está registrado.");
+            Debug.LogWarning("Service " + key + " is was already registered.");
         }
     }
 

@@ -14,14 +14,20 @@ public class Bartender : MonoBehaviour
     {
         ChangeState(new IdleState());
     }
-    [Button]
+
+    #region Debug
+
+    [Button][FoldoutGroup("Debug")]
     public void Shake() => ChangeState(new ShakingState());
-    [Button]
+    [Button][FoldoutGroup("Debug")]
     public void Success() => ChangeState(new SuccessState());
-    [Button]
+    [Button][FoldoutGroup("Debug")]
     public void Failed() => ChangeState(new FailedState());
-    [Button]
+    [Button][FoldoutGroup("Debug")]
     public void Idle() => ChangeState(new IdleState());
+
+    #endregion
+    
     public void ChangeState(BartenderState newState)
     {
         currentState = newState;

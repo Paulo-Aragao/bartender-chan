@@ -1,0 +1,296 @@
+Assets/
+├── 2D Casual UI/
+│   ├── Original Artwork/
+│   │   └── GUI.psd
+│   ├── Sprite/
+│   │   └── GUI.png
+│   └── readme.rtf
+├── Plugins/
+│   ├── Demigiant/
+│   │   └── DOTween/
+│   │       ├── DOTween.XML
+│   │       ├── DOTween.dll
+│   │       ├── DOTween.dll.mdb
+│   │       ├── Editor/
+│   │       │   ├── DOTweenEditor.XML
+│   │       │   ├── DOTweenEditor.dll
+│   │       │   ├── DOTweenEditor.dll.mdb
+│   │       │   └── Imgs/
+│   │       │       ├── DOTweenIcon.png
+│   │       │       ├── DOTweenMiniIcon.png
+│   │       │       ├── Footer.png
+│   │       │       ├── Footer_dark.png
+│   │       │       └── Header.jpg
+│   │       ├── Modules/
+│   │       │   ├── DOTweenModuleAudio.cs
+│   │       │   ├── DOTweenModuleEPOOutline.cs
+│   │       │   ├── DOTweenModulePhysics.cs
+│   │       │   ├── DOTweenModulePhysics2D.cs
+│   │       │   ├── DOTweenModuleSprite.cs
+│   │       │   ├── DOTweenModuleUI.cs
+│   │       │   ├── DOTweenModuleUnityVersion.cs
+│   │       │   └── DOTweenModuleUtils.cs
+│   │       └── readme.txt
+│   └── Sirenix/
+│       ├── Assemblies/
+│       │   ├── NoEditor/
+│       │   │   ├── Sirenix.Serialization.dll
+│       │   │   ├── Sirenix.Serialization.pdb
+│       │   │   ├── Sirenix.Utilities.dll
+│       │   │   └── Sirenix.Utilities.pdb
+│       │   ├── NoEmitAndNoEditor/
+│       │   │   ├── Sirenix.Serialization.dll
+│       │   │   ├── Sirenix.Serialization.pdb
+│       │   │   ├── Sirenix.Utilities.dll
+│       │   │   └── Sirenix.Utilities.pdb
+│       │   ├── Sirenix.OdinInspector.Attributes.dll
+│       │   ├── Sirenix.OdinInspector.Attributes.pdb
+│       │   ├── Sirenix.OdinInspector.Attributes.xml
+│       │   ├── Sirenix.OdinInspector.Editor.dll
+│       │   ├── Sirenix.OdinInspector.Editor.pdb
+│       │   ├── Sirenix.OdinInspector.Editor.xml
+│       │   ├── Sirenix.Reflection.Editor.dll
+│       │   ├── Sirenix.Reflection.Editor.pdb
+│       │   ├── Sirenix.Serialization.Config.dll
+│       │   ├── Sirenix.Serialization.Config.pdb
+│       │   ├── Sirenix.Serialization.Config.xml
+│       │   ├── Sirenix.Serialization.dll
+│       │   ├── Sirenix.Serialization.pdb
+│       │   ├── Sirenix.Serialization.xml
+│       │   ├── Sirenix.Utilities.Editor.dll
+│       │   ├── Sirenix.Utilities.Editor.pdb
+│       │   ├── Sirenix.Utilities.Editor.xml
+│       │   ├── Sirenix.Utilities.dll
+│       │   ├── Sirenix.Utilities.pdb
+│       │   ├── Sirenix.Utilities.xml
+│       │   └── link.xml
+│       ├── Demos/
+│       │   ├── Custom Attribute Processors.unitypackage
+│       │   ├── Custom Drawers.unitypackage
+│       │   ├── Editor Windows.unitypackage
+│       │   └── Sample - RPG Editor.unitypackage
+│       ├── Odin Inspector/
+│       │   ├── Assets/
+│       │   │   └── Editor/
+│       │   │       ├── Bootstrap License.txt
+│       │   │       ├── ConfigData.bytes
+│       │   │       ├── Hidden/
+│       │   │       │   ├── ExtractSpriteShader.shader
+│       │   │       │   ├── GUIUtilShader.shader
+│       │   │       │   ├── LazyEditorIconShader.shader
+│       │   │       │   └── SdfIconShader.shader
+│       │   │       ├── OdinPathLookup.asset
+│       │   │       └── SdfIconAtlas.png
+│       │   ├── Config/
+│       │   │   ├── Editor/
+│       │   │   │   ├── ColorPaletteManager.asset
+│       │   │   │   ├── GeneralDrawerConfig.asset
+│       │   │   │   ├── InspectorConfig.asset
+│       │   │   │   ├── OdinModuleConfig.asset
+│       │   │   │   └── TypeRegistryUserConfig.asset
+│       │   │   └── Resources/
+│       │   │       └── Sirenix/
+│       │   │           └── GlobalSerializationConfig.asset
+│       │   └── Modules/
+│       │       ├── Unity.Addressables.data
+│       │       ├── Unity.Entities.data
+│       │       ├── Unity.Localization.data
+│       │       ├── Unity.Mathematics/
+│       │       │   ├── MathematicsDrawers.cs
+│       │       │   ├── Sirenix.OdinInspector.Modules.UnityMathematics.asmdef
+│       │       │   └── manifest.txt
+│       │       └── Unity.Mathematics.data
+│       └── Readme.txt
+├── Resources/
+│   └── DOTweenSettings.asset
+├── TextMesh Pro/
+│   ├── Documentation/
+│   │   └── TextMesh Pro User Guide 2016.pdf
+│   ├── Fonts/
+│   │   ├── LiberationSans - OFL.txt
+│   │   └── LiberationSans.ttf
+│   ├── Resources/
+│   │   ├── Fonts & Materials/
+│   │   │   ├── LiberationSans SDF - Drop Shadow.mat
+│   │   │   ├── LiberationSans SDF - Fallback.asset
+│   │   │   ├── LiberationSans SDF - Outline.mat
+│   │   │   └── LiberationSans SDF.asset
+│   │   ├── LineBreaking Following Characters.txt
+│   │   ├── LineBreaking Leading Characters.txt
+│   │   ├── Sprite Assets/
+│   │   │   └── EmojiOne.asset
+│   │   ├── Style Sheets/
+│   │   │   └── Default Style Sheet.asset
+│   │   └── TMP Settings.asset
+│   ├── Shaders/
+│   │   ├── TMP_Bitmap-Custom-Atlas.shader
+│   │   ├── TMP_Bitmap-Mobile.shader
+│   │   ├── TMP_Bitmap.shader
+│   │   ├── TMP_SDF Overlay.shader
+│   │   ├── TMP_SDF SSD.shader
+│   │   ├── TMP_SDF-Mobile Masking.shader
+│   │   ├── TMP_SDF-Mobile Overlay.shader
+│   │   ├── TMP_SDF-Mobile SSD.shader
+│   │   ├── TMP_SDF-Mobile.shader
+│   │   ├── TMP_SDF-Surface-Mobile.shader
+│   │   ├── TMP_SDF-Surface.shader
+│   │   ├── TMP_SDF.shader
+│   │   ├── TMP_Sprite.shader
+│   │   ├── TMPro.cginc
+│   │   ├── TMPro_Mobile.cginc
+│   │   ├── TMPro_Properties.cginc
+│   │   └── TMPro_Surface.cginc
+│   └── Sprites/
+│       ├── EmojiOne Attribution.txt
+│       ├── EmojiOne.json
+│       └── EmojiOne.png
+├── _Project/
+│   ├── Animation/
+│   │   ├── Bartender.controller
+│   │   ├── Failed.anim
+│   │   ├── Idle.anim
+│   │   ├── Shaking.anim
+│   │   └── Success.anim
+│   ├── Data/
+│   │   ├── Color Pallete Data.asset
+│   │   ├── Game Elements/
+│   │   │   ├── Batenders/
+│   │   │   │   ├── Emma.asset
+│   │   │   │   ├── Lucy.asset
+│   │   │   │   ├── Maria.asset
+│   │   │   │   ├── Naomi.asset
+│   │   │   │   ├── Nina.asset
+│   │   │   │   └── Sofia.asset
+│   │   │   └── Drinks/
+│   │   │       ├── Citrus Splash.asset
+│   │   │       ├── Dragon’s Breath.asset
+│   │   │       ├── Lime Twister.asset
+│   │   │       ├── Neon Storm.asset
+│   │   │       ├── Phantom Punch.asset
+│   │   │       ├── Ruby Fizz.asset
+│   │   │       ├── Sakura Mist.asset
+│   │   │       ├── Starlight Martini.asset
+│   │   │       └── Velvet Whisper.asset
+│   │   ├── Glasses Data.asset
+│   │   └── Services/
+│   │       ├── MoneyService.asset
+│   │       └── SaveService.asset
+│   ├── Editor/
+│   │   ├── HierarchySeparatorEditor.cs
+│   │   └── HierarchySeparatorMenu.cs
+│   ├── Fonts/
+│   │   ├── Boldonse-Regular BLACK.asset
+│   │   ├── Boldonse-Regular SDF.asset
+│   │   ├── Boldonse-Regular.ttf
+│   │   └── OFL.txt
+│   ├── Prefabs/
+│   │   ├── Core/
+│   │   │   └── SERVICES INITIALIZER.prefab
+│   │   ├── Drink Preview.prefab
+│   │   ├── UI/
+│   │   │   ├── CicleButton.prefab
+│   │   │   ├── LevelConteiner.prefab
+│   │   │   ├── MoneyConteiner.prefab
+│   │   │   ├── ReputaionContainer.prefab
+│   │   │   └── SquadButton.prefab
+│   │   └── bartender-1.prefab
+│   ├── Scenes/
+│   │   ├── Boot.unity
+│   │   └── Game.unity
+│   ├── Scripts/
+│   │   ├── Core/
+│   │   │   ├── Boot.cs
+│   │   │   ├── IBootDependency.cs
+│   │   │   ├── ScenesController.cs
+│   │   │   └── ServicesInitializer.cs
+│   │   ├── Data/
+│   │   │   ├── ColorData.cs
+│   │   │   └── ColorPalleteSO.cs
+│   │   ├── Gameplay/
+│   │   │   ├── Bartender/
+│   │   │   │   ├── Bartender.cs
+│   │   │   │   ├── BatenderDataSO.cs
+│   │   │   │   └── State Pattern/
+│   │   │   │       ├── BartenderState.cs
+│   │   │   │       ├── FailedState.cs
+│   │   │   │       ├── IdleState.cs
+│   │   │   │       ├── ShakingState.cs
+│   │   │   │       └── SuccessState.cs
+│   │   │   ├── BartendersController.cs
+│   │   │   ├── DrinkPreview.cs
+│   │   │   ├── Drinks/
+│   │   │   │   ├── DrinkDataSO.cs
+│   │   │   │   ├── GlassData.cs
+│   │   │   │   └── GlassesDataSO.cs
+│   │   │   ├── GameElementsProviderSO.cs
+│   │   │   ├── GameEntitySO.cs
+│   │   │   ├── GameManager.cs
+│   │   │   └── Tests.cs
+│   │   ├── Services/
+│   │   │   ├── Providers/
+│   │   │   │   ├── MoneyService.cs
+│   │   │   │   └── ServiceLocator.cs
+│   │   │   ├── SaveSystem/
+│   │   │   │   ├── Data/
+│   │   │   │   │   └── SaveData.cs
+│   │   │   │   └── SaveService.cs
+│   │   │   └── Service.cs
+│   │   ├── UI/
+│   │   │   ├── AnimationTextLoading.cs
+│   │   │   ├── MoneyUIControll.cs
+│   │   │   └── UIManager.cs
+│   │   └── Utils/
+│   │       └── HierarchySeparator.cs
+│   ├── Sounds/
+│   │   └── Music/
+│   │       └── Moonlit Rendezvous.mp3
+│   └── Sprites/
+│       ├── Characters/
+│       │   ├── Bartender/
+│       │   │   ├── apron.png
+│       │   │   ├── bartender-failed.png
+│       │   │   ├── bartender-hair-color.png
+│       │   │   ├── bartender-idle.png
+│       │   │   ├── bartender-shake-1.png
+│       │   │   ├── bartender-shake-2.png
+│       │   │   ├── bartender-shake-3.png
+│       │   │   ├── bartender-shake-4.png
+│       │   │   ├── bartender-shake-5.png
+│       │   │   ├── bartender-shake-arm.png
+│       │   │   ├── bartender-shake.png
+│       │   │   ├── bartender-smile.png
+│       │   │   ├── bartender-success.png
+│       │   │   ├── bartender.psd
+│       │   │   ├── dress.png
+│       │   │   └── hair-color.png
+│       │   ├── Client/
+│       │   │   ├── client-1.png
+│       │   │   ├── client-2.png
+│       │   │   ├── client-3.png
+│       │   │   └── client-4.png
+│       │   └── Nova pasta/
+│       ├── Enviroment/
+│       │   ├── background-level-1.png
+│       │   ├── background-level-2.png
+│       │   ├── background-level-3.png
+│       │   ├── background.psd
+│       │   └── table.png
+│       ├── GUI/
+│       │   ├── order-icon.png
+│       │   └── top-panel.png
+│       └── Items/
+│           ├── HighBall/
+│           │   ├── high-ball-glass-base.png
+│           │   └── high-ball-glass-color.png
+│           ├── LittleBottle/
+│           │   ├── little-bottom-base.png
+│           │   └── little-bottom-color.png
+│           ├── MartiniGlass/
+│           │   ├── martine-glass-color.png
+│           │   └── martine-glass.png
+│           ├── Poco Grande Glass/
+│           │   ├── poco-grande-glass-base.png
+│           │   └── poco-grande-glass-color.png
+│           └── items.psd
+├── directory_tree.txt
+└── filestructexport.py

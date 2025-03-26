@@ -21,10 +21,15 @@ public class Bartender : MonoBehaviour
     
     private BartenderState currentState;
 
+    #region Monobehaviour
+
     void Start()
     {
         ChangeState(new IdleState());
     }
+
+    #endregion
+    
 
     #region Debug
 
@@ -41,16 +46,24 @@ public class Bartender : MonoBehaviour
 
     #region Methods
 
-    public void Setup( BatenderDataSO data )
+    public void Setup( BartenderDataSO data )
     {
         _dressSprite.color = data.dressColor;
         _hairSprite.color = data.hairColor;
         //_clientSprite.sprite = data.ClientSprite; TODO:client sprite
     }
+
+    public void OnStateChange(string stateName)
+    {
+        if(stateName == "Success") 
+            _drinkPreview.gameObject.SetActive(true);
+        else
+            _drinkPreview.gameObject.SetActive(false);
+    }
     public void ChangeState(BartenderState newState)
     {
         currentState = newState;
-        currentState.Handle(this);
+        currentState.Handle(this,OnStateChange);
     }
 
     public void SetAnimation(string animName)

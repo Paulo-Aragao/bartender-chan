@@ -21,14 +21,14 @@ public class SaveService : Service
         File.WriteAllText(SavePath(fileName), json);
     }
 
-    public T Load<T>(string fileName) where T : new()
+    public T Load<T>() where T : new()
     {
-        string path = SavePath(fileName);
+        string path = SavePath("SaveData");
         if (File.Exists(path))
         {
             string json = File.ReadAllText(path);
             return JsonUtility.FromJson<T>(json);
-        }
+        } 
 
         return new T();
     }

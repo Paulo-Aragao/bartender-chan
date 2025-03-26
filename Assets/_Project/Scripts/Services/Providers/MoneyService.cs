@@ -48,9 +48,10 @@ public class MoneyService : Service
     public void Load()
     {
         SaveService saveService = ServiceLocator.Get<SaveService>();
-        if (saveService.Exists("SaveData"))
+        SaveData data = saveService.Load<SaveData>();
+
+        if (data != null)
         {
-            SaveData data = saveService.Load<SaveData>("SaveData");
             _currentMoney = data.currentMoney;
             OnMoneyChanged?.Invoke(_currentMoney);
         }

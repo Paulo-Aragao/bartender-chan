@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 [CreateAssetMenu(fileName = "Bartender Data", menuName = "MindGG/Bartender Data")]
-public class BatenderDataSO : GameEntitySO
+public class BartenderDataSO : GameEntitySO
 {
     [ValueDropdown("GetColorOptions")]
     public Color hairColor;

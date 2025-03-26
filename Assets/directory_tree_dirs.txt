@@ -1,0 +1,75 @@
+Assets/
+├── 2D Casual UI/
+│   ├── Original Artwork/
+│   └── Sprite/
+├── Plugins/
+│   ├── Demigiant/
+│   │   └── DOTween/
+│   │       ├── Editor/
+│   │       │   └── Imgs/
+│   │       └── Modules/
+│   └── Sirenix/
+│       ├── Assemblies/
+│       │   ├── NoEditor/
+│       │   └── NoEmitAndNoEditor/
+│       ├── Demos/
+│       └── Odin Inspector/
+│           ├── Assets/
+│           │   └── Editor/
+│           │       └── Hidden/
+│           ├── Config/
+│           │   ├── Editor/
+│           │   └── Resources/
+│           │       └── Sirenix/
+│           └── Modules/
+│               └── Unity.Mathematics/
+├── Resources/
+├── TextMesh Pro/
+│   ├── Documentation/
+│   ├── Fonts/
+│   ├── Resources/
+│   │   ├── Fonts & Materials/
+│   │   ├── Sprite Assets/
+│   │   └── Style Sheets/
+│   ├── Shaders/
+│   └── Sprites/
+└── _Project/
+    ├── Animation/
+    ├── Data/
+    │   ├── Game Elements/
+    │   │   ├── Batenders/
+    │   │   └── Drinks/
+    │   └── Services/
+    ├── Editor/
+    ├── Fonts/
+    ├── Prefabs/
+    │   ├── Core/
+    │   └── UI/
+    ├── Scenes/
+    ├── Scripts/
+    │   ├── Core/
+    │   ├── Data/
+    │   ├── Gameplay/
+    │   │   ├── Bartender/
+    │   │   │   └── State Pattern/
+    │   │   └── Drinks/
+    │   ├── Services/
+    │   │   ├── Providers/
+    │   │   └── SaveSystem/
+    │   │       └── Data/
+    │   ├── UI/
+    │   └── Utils/
+    ├── Sounds/
+    │   └── Music/
+    └── Sprites/
+        ├── Characters/
+        │   ├── Bartender/
+        │   ├── Client/
+        │   └── Nova pasta/
+        ├── Enviroment/
+        ├── GUI/
+        └── Items/
+            ├── HighBall/
+            ├── LittleBottle/
+            ├── MartiniGlass/
+            └── Poco Grande Glass/

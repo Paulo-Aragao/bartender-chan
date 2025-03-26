@@ -12,4 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cedc75cc4cbd83498a30cdc2b14d7bc, type: 3}
   m_Name: Color Pallete Data
   m_EditorClassIdentifier: 
-  colors: []
+  colors:
+  - label: Black
+    color: {r: 0, g: 0, b: 0, a: 1}
+  - label: Blonde
+    color: {r: 1, g: 0.71898425, b: 0, a: 1}
+  - label: Red
+    color: {r: 1, g: 0, b: 0, a: 1}
+  - label: Blue
+    color: {r: 0, g: 0.2243948, b: 1, a: 1}
+  - label: Pink
+    color: {r: 0.9652157, g: 0, b: 1, a: 1}
+  - label: Silver
+    color: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
+  - label: Violet
+    color: {r: 0.71420574, g: 0, b: 1, a: 1}
+  - label: Brown
+    color: {r: 0.49056602, g: 0.21288712, b: 0, a: 1}
+  - label: Green
+    color: {r: 0, g: 0.7075472, b: 0.055493895, a: 1}
+  - label: Purple
+    color: {r: 0.28738806, g: 0, b: 0.5377358, a: 1}
+  - label: Yellow
+    color: {r: 1, g: 0.94471574, b: 0, a: 1}
+  - label: Orange
+    color: {r: 1, g: 0.48557156, b: 0, a: 1}
+  - label: Cyan
+    color: {r: 0, g: 1, b: 1, a: 1}
+  - label: White
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - label: Gold
+    color: {r: 0.7169812, g: 0.4636476, b: 0, a: 1}

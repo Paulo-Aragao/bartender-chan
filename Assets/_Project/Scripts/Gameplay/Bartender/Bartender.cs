@@ -6,7 +6,18 @@ using UnityEngine.Serialization;
 
 public class Bartender : MonoBehaviour
 {
+    [BoxGroup("References")]
     [SerializeField] private Animator _animator;
+    [BoxGroup("References")]
+    [SerializeField] private SpriteRenderer _baseSprite;
+    [BoxGroup("References")]
+    [SerializeField] private SpriteRenderer _dressSprite;
+    [BoxGroup("References")]
+    [SerializeField] private SpriteRenderer _hairSprite;
+    [BoxGroup("References")]
+    [SerializeField] private DrinkPreview _drinkPreview;
+    [BoxGroup("References")]
+    [SerializeField] private SpriteRenderer _clientSprite;
     
     private BartenderState currentState;
 
@@ -27,7 +38,15 @@ public class Bartender : MonoBehaviour
     public void Idle() => ChangeState(new IdleState());
 
     #endregion
-    
+
+    #region Methods
+
+    public void Setup( BatenderDataSO data )
+    {
+        _dressSprite.color = data.dressColor;
+        _hairSprite.color = data.hairColor;
+        //_clientSprite.sprite = data.ClientSprite; TODO:client sprite
+    }
     public void ChangeState(BartenderState newState)
     {
         currentState = newState;
@@ -38,4 +57,7 @@ public class Bartender : MonoBehaviour
     {
         _animator.Play(animName);
     }
+
+    #endregion
+    
 }

@@ -18,7 +18,9 @@ public class Bartender : MonoBehaviour
     [SerializeField] private DrinkPreview _drinkPreview;
     [BoxGroup("References")]
     [SerializeField] private SpriteRenderer _clientSprite;
-    
+
+    private string _bartenderName;
+    public string BartenderName => _bartenderName;
     private BartenderState currentState;
 
     #region Monobehaviour
@@ -48,9 +50,15 @@ public class Bartender : MonoBehaviour
 
     public void Setup( BartenderDataSO data )
     {
+        _bartenderName = data.name;
         _dressSprite.color = data.dressColor;
         _hairSprite.color = data.hairColor;
         //_clientSprite.sprite = data.ClientSprite; TODO:client sprite
+    }
+
+    public void SetActive(bool isActive)
+    {
+        gameObject.SetActive(isActive);
     }
 
     public void OnStateChange(string stateName)

@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.1, y: 0.000030518}
-  m_SizeDelta: {x: 132.834, y: 34.824}
+  m_AnchoredPosition: {x: -0.0000011921, y: -0.0000088215}
+  m_SizeDelta: {x: 169.822, y: 44.512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8640869331365105227
 CanvasRenderer:
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 4878545
+  m_text: 458.968.447.58
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b70165ccc22a4ac4786bb9f3f2ed9d17, type: 2}
   m_sharedMaterial: {fileID: -315317609478500449, guid: b70165ccc22a4ac4786bb9f3f2ed9d17, type: 2}
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.1
+  m_fontSize: 20.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -258,8 +258,10 @@ GameObject:
   - component: {fileID: 2056998150314536943}
   - component: {fileID: 43324321655002742}
   - component: {fileID: 8200729902842367204}
+  - component: {fileID: 2535392092920969308}
+  - component: {fileID: 811728489908586179}
   m_Layer: 5
-  m_Name: ItemStore
+  m_Name: BartenderItemStore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.11137152, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.6010914, g: 1, b: 0.5518868, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -324,6 +326,82 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2535392092920969308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578530183256039423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841ba1837430a4748860bf08f03047aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canBuyColor: {r: 0.6, g: 1, b: 0.5529412, a: 1}
+  _cannotBuyColor: {r: 1, g: 0.4764151, b: 0.4764151, a: 1}
+  _price: {fileID: 3143731048510806713}
+  _border: {fileID: 8200729902842367204}
+  _priceConteiner: {fileID: 3119047994377371860}
+  _iconBase: {fileID: 359419214488339355}
+  _drees: {fileID: 4527038338570802371}
+  _hair: {fileID: 2438678969193398457}
+--- !u!114 &811728489908586179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578530183256039423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 8200729902842367204}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2535392092920969308}
+        m_TargetAssemblyTypeName: BartenderStoreItem, Assembly-CSharp
+        m_MethodName: SelectBartender
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1591269807474180994
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,8 +437,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000095367, y: -98.6}
-  m_SizeDelta: {x: 148.025, y: 44.512}
+  m_AnchoredPosition: {x: 0.0000095367, y: -97.801}
+  m_SizeDelta: {x: 195.54, y: 42.399}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8412102519483799082
 CanvasRenderer:
@@ -383,7 +461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.043704987, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.6039216, g: 1, b: 0.5529412, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

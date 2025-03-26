@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class StoreItem : MonoBehaviour
+public abstract class StoreItem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [BoxGroup("Setup")]
+    [SerializeField] protected Color _canBuyColor;
+    [BoxGroup("Setup")]
+    [SerializeField] protected Color _cannotBuyColor;
+    
+    [SerializeField] protected TextMeshProUGUI _price;
+    [SerializeField] protected Image _border;
+    [SerializeField] protected Image _priceConteiner;
+    [SerializeField] protected Image _iconBase;
+    
 }

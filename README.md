@@ -117,5 +117,5 @@ No nosso projeto, o State Pattern é aplicado na lógica dos bartenders, conform
 
 2. O projeto deve ser sempre executado pela a cena boot
 
-  A cena boot é onde os serviços do Service Locator são registrados e inicializados, essa cena serve para garantir que ao iniciar o jogo tudo que é necessario já vai está pronto para o uso.
-  A cena fica em Assets/_Project/Scenes/boot.scene:
+A cena boot é onde os serviços do Service Locator são registrados e inicializados, essa cena serve para garantir que ao iniciar o jogo tudo que é necessario já vai está pronto para o uso.
+A cena fica em Assets/_Project/Scenes/boot.scene:

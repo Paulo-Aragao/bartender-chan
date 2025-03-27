@@ -21,9 +21,9 @@ public class SaveService : Service
         File.WriteAllText(SavePath(fileName), json);
     }
 
-    public T Load<T>() where T : new()
+    public T Load<T>(string fileName) where T : new()
     {
-        string path = SavePath("SaveData");
+        string path = SavePath(fileName);
         if (File.Exists(path))
         {
             string json = File.ReadAllText(path);

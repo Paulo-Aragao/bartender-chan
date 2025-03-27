@@ -36,7 +36,7 @@ public class StoreManager : MonoBehaviour
     private void SetupBartendersItens()
     {
         GameElementsService gameElementsService = ServiceLocator.Get<GameElementsService>();
-        foreach (BartenderDataSO bartenderData in gameElementsService._bartenders)
+        foreach (BartenderDataSO bartenderData in gameElementsService.bartenders)
         {
             Instantiate(_itemPrefab, _itemsParent).Setup(bartenderData, this);
         }

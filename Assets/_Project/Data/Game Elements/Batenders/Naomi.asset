@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Naomi
   m_EditorClassIdentifier: 
   colorPallete: {fileID: 11400000, guid: bbf8147d1b810274ca0ce92df4b5b456, type: 2}
-  name: Lucy
+  name: Naomi
   hairColor: {r: 0, g: 0, b: 0, a: 1}
   dressColor: {r: 0, g: 0, b: 0, a: 1}
   speed: 6

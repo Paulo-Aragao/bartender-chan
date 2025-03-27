@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -19,10 +20,18 @@ public class Bartender : MonoBehaviour
     [BoxGroup("References")]
     [SerializeField] private SpriteRenderer _clientSprite;
 
+    [BoxGroup("Setup")] 
+    [SerializeField] private float _successDuration = 2;
+    [BoxGroup("Setup")] 
+    [SerializeField] private float _failedDuration = 2;
+    
     private string _bartenderName;
     public string BartenderName => _bartenderName;
-    private BartenderState currentState;
-
+    private BartenderState _currentState;
+    public BartenderState CurrentState => _currentState;
+    private DrinkDataSO _drinkInProcess;
+    private BartenderDataSO _bartenderData;
+    
     #region Monobehaviour
 
     void Start()
@@ -50,12 +59,60 @@ public class Bartender : MonoBehaviour
 
     public void Setup( BartenderDataSO data )
     {
-        _bartenderName = data.name;
-        _dressSprite.color = data.dressColor;
-        _hairSprite.color = data.hairColor;
-        //_clientSprite.sprite = data.ClientSprite; TODO:client sprite
+        _bartenderData = data;
+        _bartenderName = _bartenderData.name;
+        _dressSprite.color = _bartenderData.dressColor;
+        _hairSprite.color = _bartenderData.hairColor;
     }
 
+    public void PrepareOrder(DrinkDataSO drinkData)
+    {
+        _drinkInProcess = drinkData;
+        ChangeState(new ShakingState());
+
+        float timeToPrepare = CalculateTimeToPrepare(drinkData);
+        DOVirtual.DelayedCall(timeToPrepare, () => OnPreparationComplete(drinkData));
+    }
+
+    private float CalculateTimeToPrepare(DrinkDataSO drinkData)
+    {
+        return (_bartenderData.speed * drinkData.timeToPrepare )/2;
+    }
+
+    private void OnPreparationComplete(DrinkDataSO drinkData)
+    {
+        float chance = CalculateSuccessChance(drinkData.difficulty, _bartenderData.skill);
+        bool success = Random.value <= chance;
+
+        if (success)
+        {
+            HandleOrderSuccess(drinkData);
+        }
+        else
+        {
+            HandleOrderFailure();
+        }
+    }
+
+    private void HandleOrderSuccess(DrinkDataSO drinkData)
+    {
+        ServiceLocator.Get<MoneyService>().Add(drinkData.price);
+        _drinkPreview.Setup(drinkData);
+        ChangeState(new SuccessState());
+        DOVirtual.DelayedCall(_successDuration, () => ChangeState(new IdleState()));
+    }
+
+    private void HandleOrderFailure()
+    {
+        ChangeState(new FailedState());
+        DOVirtual.DelayedCall(_failedDuration, () => ChangeState(new IdleState()));
+    }
+    public static float CalculateSuccessChance(float drinkDifficulty, float bartenderSkill)
+    {
+        float normalizedSkill = bartenderSkill;
+        float successChance = normalizedSkill * (1f - drinkDifficulty);
+        return Mathf.Clamp01(successChance);
+    }
     public void SetActive(bool isActive)
     {
         gameObject.SetActive(isActive);
@@ -63,15 +120,17 @@ public class Bartender : MonoBehaviour
 
     public void OnStateChange(string stateName)
     {
-        if(stateName == "Success") 
+        if (stateName == "Success")
+        {
             _drinkPreview.gameObject.SetActive(true);
+        }
         else
             _drinkPreview.gameObject.SetActive(false);
     }
     public void ChangeState(BartenderState newState)
     {
-        currentState = newState;
-        currentState.Handle(this,OnStateChange);
+        _currentState = newState;
+        _currentState.Handle(this,OnStateChange);
     }
 
     public void SetAnimation(string animName)

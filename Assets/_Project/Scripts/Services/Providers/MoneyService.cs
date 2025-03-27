@@ -48,7 +48,7 @@ public class MoneyService : Service
     public void Load()
     {
         SaveService saveService = ServiceLocator.Get<SaveService>();
-        SaveData data = saveService.Load<SaveData>();
+        MoneySaveData data = saveService.Load<MoneySaveData>("MoneySaveData");
 
         if (data != null)
         {
@@ -65,8 +65,8 @@ public class MoneyService : Service
     public void Save()
     {
         SaveService saveService = ServiceLocator.Get<SaveService>();
-        SaveData data = new SaveData { currentMoney = _currentMoney };
-        saveService.Save(data, "SaveData");
+        MoneySaveData data = new MoneySaveData { currentMoney = _currentMoney };
+        saveService.Save(data, "MoneySaveData");
     }
     #endregion
 }

@@ -331,6 +331,8 @@ MonoBehaviour:
   _hairSprite: {fileID: 5427485240973249732}
   _drinkPreview: {fileID: 4320488141821013093}
   _clientSprite: {fileID: 6161216587585804131}
+  _successDuration: 2
+  _failedDuration: 2
 --- !u!1 &8009476321114489052
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,7 +433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4755888395574485145
 Transform:
   m_ObjectHideFlags: 0

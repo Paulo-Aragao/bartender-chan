@@ -16,36 +16,68 @@ public class BartendersController : MonoBehaviour
         LoadBartenders();
     }
 
+    public void ReceiveOrder(DrinkDataSO order)
+    {
+        foreach (Bartender bartender in _bartenders)
+        {
+            //compare current state type
+            if (bartender.gameObject.activeSelf == false)
+                continue;
+            if (bartender.CurrentState.GetType() == typeof(IdleState))
+            {
+                bartender.PrepareOrder(order);
+                break;
+            }
+        }
+    }
+
     public void LoadBartenders()
     {
         GameElementsService gameElementsService = ServiceLocator.Get<GameElementsService>();
         SaveService saveService = ServiceLocator.Get<SaveService>();
-        SaveData saveData = saveService.Load<SaveData>();
+        BartenderSaveData bartenderData = saveService.Load<BartenderSaveData>("BartenderSaveData");
         _activeBartendersCount = 0;
-        if (saveData != null)
+        if (bartenderData != null)
         {
-            if (string.IsNullOrEmpty(saveData.bartenderNanmes[0]))
+            if (bartenderData.bartenderNanmes != null)
             {
-                saveData.bartenderNanmes = new string[_bartenders.Count];
+                if (string.IsNullOrEmpty(bartenderData.bartenderNanmes[0]))
+                {
+                    bartenderData.bartenderNanmes = new string[_bartenders.Count];
+                    _bartenders[0].Setup(gameElementsService.GetBartenderDataByName("Lucy"));
+                    SaveBartenders();
+                    _bartenders[0].SetActive(true);
+                    bartenderData = saveService.Load<BartenderSaveData>("BartenderSaveData");
+                }
+                for (int i = 0; i < bartenderData.bartenderNanmes.Length; i++)
+                {
+                    string bartenderName = bartenderData.bartenderNanmes[i];
+                    if (!string.IsNullOrEmpty(bartenderName))
+                    {
+                        _bartenders[i].Setup(gameElementsService.GetBartenderDataByName(bartenderName));
+                        _bartenders[i].SetActive(true);
+                        _activeBartendersCount++;
+                    }
+                    else
+                    {
+                        _bartenders[i].SetActive(false);
+                    }
+                }
+            }
+            else
+            {
+                bartenderData.bartenderNanmes = new string[_bartenders.Count];
                 _bartenders[0].Setup(gameElementsService.GetBartenderDataByName("Lucy"));
                 SaveBartenders();
                 _bartenders[0].SetActive(true);
-                saveData = saveService.Load<SaveData>();
             }
-            for (int i = 0; i < saveData.bartenderNanmes.Length; i++)
-            {
-                string bartenderName = saveData.bartenderNanmes[i];
-                if (!string.IsNullOrEmpty(bartenderName))
-                {
-                    _bartenders[i].Setup(gameElementsService.GetBartenderDataByName(bartenderName));
-                    _bartenders[i].SetActive(true);
-                    _activeBartendersCount++;
-                }
-                else
-                {
-                    _bartenders[i].SetActive(false);
-                }
-            }
+        }
+        else
+        {
+            bartenderData.bartenderNanmes = new string[_bartenders.Count];
+            _bartenders[0].Setup(gameElementsService.GetBartenderDataByName("Lucy"));
+            SaveBartenders();
+            _bartenders[0].SetActive(true);
         }
         
         ArrangeBartenders();
@@ -101,7 +133,7 @@ public class BartendersController : MonoBehaviour
     public void SaveBartenders()
     {
         SaveService saveService = ServiceLocator.Get<SaveService>();
-        SaveData data = new SaveData { bartenderNanmes = new string[_bartenders.Count] };
+        BartenderSaveData data = new BartenderSaveData { bartenderNanmes = new string[_bartenders.Count] };
         for (int i = 0; i < _bartenders.Count; i++)
         {
             if (_bartenders[i].gameObject.activeSelf)
@@ -109,6 +141,6 @@ public class BartendersController : MonoBehaviour
                 data.bartenderNanmes[i] = _bartenders[i].BartenderName;
             }
         }
-        saveService.Save(data, "SaveData");
+        saveService.Save(data, "BartenderSaveData");
     }
 }

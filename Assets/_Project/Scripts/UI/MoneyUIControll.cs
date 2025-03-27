@@ -21,6 +21,12 @@ public class MoneyUIControll : MonoBehaviour
     {
         _moneyText.text = newAmount.ToString();
     }
+
+    public void OnDisable()
+    {
+        SaveMoney();
+    }
+
     [Button]
     public void SaveMoney()
     {

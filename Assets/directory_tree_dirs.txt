@@ -60,7 +60,8 @@ Assets/
     │   ├── UI/
     │   └── Utils/
     ├── Sounds/
-    │   └── Music/
+    │   ├── Music/
+    │   └── SFX/
     └── Sprites/
         ├── Characters/
         │   ├── Bartender/

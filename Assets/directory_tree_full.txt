@@ -173,11 +173,14 @@ Assets/
 │   │   │       └── Velvet Whisper.asset
 │   │   ├── Glasses Data.asset
 │   │   └── Services/
+│   │       ├── Game Elements Service.asset
 │   │       ├── MoneyService.asset
-│   │       └── SaveService.asset
+│   │       ├── SaveService.asset
+│   │       └── Sound Service.asset
 │   ├── Editor/
 │   │   ├── HierarchySeparatorEditor.cs
-│   │   └── HierarchySeparatorMenu.cs
+│   │   ├── HierarchySeparatorMenu.cs
+│   │   └── PerformanceDebugTool.cs
 │   ├── Fonts/
 │   │   ├── Boldonse-Regular BLACK.asset
 │   │   ├── Boldonse-Regular SDF.asset
@@ -188,6 +191,7 @@ Assets/
 │   │   │   └── SERVICES INITIALIZER.prefab
 │   │   ├── Drink Preview.prefab
 │   │   ├── UI/
+│   │   │   ├── BartenderItemStore.prefab
 │   │   │   ├── CicleButton.prefab
 │   │   │   ├── LevelConteiner.prefab
 │   │   │   ├── MoneyConteiner.prefab
@@ -209,7 +213,7 @@ Assets/
 │   │   ├── Gameplay/
 │   │   │   ├── Bartender/
 │   │   │   │   ├── Bartender.cs
-│   │   │   │   ├── BatenderDataSO.cs
+│   │   │   │   ├── BartenderDataSO.cs
 │   │   │   │   └── State Pattern/
 │   │   │   │       ├── BartenderState.cs
 │   │   │   │       ├── FailedState.cs
@@ -222,28 +226,38 @@ Assets/
 │   │   │   │   ├── DrinkDataSO.cs
 │   │   │   │   ├── GlassData.cs
 │   │   │   │   └── GlassesDataSO.cs
-│   │   │   ├── GameElementsProviderSO.cs
 │   │   │   ├── GameEntitySO.cs
-│   │   │   ├── GameManager.cs
+│   │   │   ├── OrdersManager.cs
 │   │   │   └── Tests.cs
 │   │   ├── Services/
 │   │   │   ├── Providers/
+│   │   │   │   ├── GameElementsService.cs
 │   │   │   │   ├── MoneyService.cs
-│   │   │   │   └── ServiceLocator.cs
+│   │   │   │   ├── ServiceLocator.cs
+│   │   │   │   └── SoundService.cs
 │   │   │   ├── SaveSystem/
 │   │   │   │   ├── Data/
-│   │   │   │   │   └── SaveData.cs
+│   │   │   │   │   ├── BartenderSaveData.cs
+│   │   │   │   │   └── MoneySaveData.cs
 │   │   │   │   └── SaveService.cs
 │   │   │   └── Service.cs
 │   │   ├── UI/
 │   │   │   ├── AnimationTextLoading.cs
+│   │   │   ├── BartenderStoreItem.cs
+│   │   │   ├── DrinkStoreItem.cs
 │   │   │   ├── MoneyUIControll.cs
+│   │   │   ├── SlotSelector.cs
+│   │   │   ├── StoreItem.cs
+│   │   │   ├── StoreManager.cs
 │   │   │   └── UIManager.cs
 │   │   └── Utils/
 │   │       └── HierarchySeparator.cs
 │   ├── Sounds/
-│   │   └── Music/
-│   │       └── Moonlit Rendezvous.mp3
+│   │   ├── Music/
+│   │   │   └── Moonlit Rendezvous.mp3
+│   │   └── SFX/
+│   │       ├── failed.mp3
+│   │       └── success.mp3
 │   └── Sprites/
 │       ├── Characters/
 │       │   ├── Bartender/
@@ -276,7 +290,14 @@ Assets/
 │       │   ├── background.psd
 │       │   └── table.png
 │       ├── GUI/
+│       │   ├── mask-store-item.png
 │       │   ├── order-icon.png
+│       │   ├── table-number-1.png
+│       │   ├── table-number-2.png
+│       │   ├── table-number-3.png
+│       │   ├── table-number-4.png
+│       │   ├── table-number-5.png
+│       │   ├── table-number.png
 │       │   └── top-panel.png
 │       └── Items/
 │           ├── HighBall/
@@ -293,4 +314,6 @@ Assets/
 │           │   └── poco-grande-glass-color.png
 │           └── items.psd
 ├── directory_tree.txt
+├── directory_tree_dirs.txt
+├── directory_tree_full.txt
 └── filestructexport.py

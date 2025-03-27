@@ -98,7 +98,7 @@ public class Bartender : MonoBehaviour
     private void HandleOrderSuccess()
     {
         ServiceLocator.Get<MoneyService>().Add(_drinkInProcess.price);
-        
+        ServiceLocator.Get<SoundService>().PlaySFX("Success");
         ChangeState(new SuccessState());
         DOVirtual.DelayedCall(_successDuration, () => ChangeState(new IdleState()));
     }
@@ -106,6 +106,7 @@ public class Bartender : MonoBehaviour
     private void HandleOrderFailure()
     {
         ChangeState(new FailedState());
+        ServiceLocator.Get<SoundService>().PlaySFX("Failed");
         DOVirtual.DelayedCall(_failedDuration, () => ChangeState(new IdleState()));
     }
     public static float CalculateSuccessChance(float drinkDifficulty, float bartenderSkill)

@@ -20,4 +20,4 @@ MonoBehaviour:
   cost: 5
   difficulty: 0.2
   price: 12
-  timeToPrepare: 2.5
+  timeToPrepare: 5

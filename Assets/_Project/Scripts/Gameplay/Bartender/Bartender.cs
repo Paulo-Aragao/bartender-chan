@@ -63,6 +63,7 @@ public class Bartender : MonoBehaviour
         _bartenderName = _bartenderData.name;
         _dressSprite.color = _bartenderData.dressColor;
         _hairSprite.color = _bartenderData.hairColor;
+        _animator.speed = _bartenderData.speed;
     }
 
     public void PrepareOrder(DrinkDataSO drinkData)
@@ -70,23 +71,23 @@ public class Bartender : MonoBehaviour
         _drinkInProcess = drinkData;
         ChangeState(new ShakingState());
 
-        float timeToPrepare = CalculateTimeToPrepare(drinkData);
-        DOVirtual.DelayedCall(timeToPrepare, () => OnPreparationComplete(drinkData));
+        float timeToPrepare = CalculateTimeToPrepare(_drinkInProcess);
+        DOVirtual.DelayedCall(timeToPrepare, OnPreparationComplete);
     }
 
     private float CalculateTimeToPrepare(DrinkDataSO drinkData)
     {
-        return (_bartenderData.speed * drinkData.timeToPrepare )/2;
+        return drinkData.timeToPrepare/_bartenderData.speed;
     }
-
-    private void OnPreparationComplete(DrinkDataSO drinkData)
+    
+    private void OnPreparationComplete()
     {
-        float chance = CalculateSuccessChance(drinkData.difficulty, _bartenderData.skill);
+        float chance = CalculateSuccessChance(_drinkInProcess.difficulty, _bartenderData.skill);
         bool success = Random.value <= chance;
 
         if (success)
         {
-            HandleOrderSuccess(drinkData);
+            HandleOrderSuccess();
         }
         else
         {
@@ -94,10 +95,10 @@ public class Bartender : MonoBehaviour
         }
     }
 
-    private void HandleOrderSuccess(DrinkDataSO drinkData)
+    private void HandleOrderSuccess()
     {
-        ServiceLocator.Get<MoneyService>().Add(drinkData.price);
-        _drinkPreview.Setup(drinkData);
+        ServiceLocator.Get<MoneyService>().Add(_drinkInProcess.price);
+        
         ChangeState(new SuccessState());
         DOVirtual.DelayedCall(_successDuration, () => ChangeState(new IdleState()));
     }

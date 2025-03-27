@@ -17,5 +17,5 @@ MonoBehaviour:
   hairColor: {r: 0, g: 0, b: 0, a: 1}
   dressColor: {r: 0, g: 0, b: 0, a: 1}
   speed: 6
-  skill: 8
+  skill: 5
   wage: 20000

@@ -16,49 +16,6 @@ No jogo, você gerencia um bar com até 5 bartenders. Cada bartender prepara dri
 - **Ferramentas de Debug:**  
   Ferramentas auxiliares desenvolvidas com Odin Inspector, incluindo uma janela de debug que exibe métricas em tempo real (dinheiro atual, dinheiro por minuto e FPS) e mede o desempenho das operações de save/load.
 
-## Estrutura do Projeto
-
-_Project/
-├── Animation/             # Animações do jogo
-├── Data/                  # Dados e configurações gerais do jogo
-│   ├── Game Elements/     # Dados dos elementos do jogo (drinks e bartenders)
-│   │   ├── Bartenders/    # Configurações e dados dos bartenders
-│   │   └── Drinks/        # Configurações e dados dos drinks
-│   └── Services/          # Configurações e dados dos serviços (ex.: SaveService)
-├── Editor/                # Scripts e customizações do Editor do Unity
-├── Fonts/                 # Fontes utilizadas no jogo
-├── Prefabs/               # Prefabs para instanciar objetos nas cenas
-│   ├── Core/              # Prefabs centrais
-│   └── UI/                # Prefabs da interface do usuário
-├── Scenes/                # Cenas do jogo
-├── Scripts/               # Código-fonte do jogo
-│   ├── Core/              # Scripts centrais e gerenciadores
-│   ├── Data/              # Scripts relacionados a dados e configurações
-│   ├── Gameplay/          # Scripts das mecânicas de jogo
-│   │   ├── Bartender/     # Scripts específicos para bartenders
-│   │   │   └── State Pattern/  # Implementação do State Pattern para bartenders
-│   │   └── Drinks/        # Scripts para criação e gerenciamento de drinks
-│   ├── Services/          # Scripts dos serviços do jogo
-│   │   ├── Providers/     # Provedores de serviços (ex.: SoundService)
-│   │   └── SaveSystem/    # Sistema de salvamento
-│   │       └── Data/      # Dados utilizados pelo sistema de salvamento
-│   ├── UI/                # Scripts da interface do usuário
-│   └── Utils/             # Scripts utilitários e métodos de extensão
-├── Sounds/                # Arquivos de áudio do jogo
-│   ├── Music/             # Músicas e trilha sonora
-│   └── SFX/               # Efeitos sonoros (SFX)
-└── Sprites/               # Imagens e sprites do jogo
-    ├── Characters/        # Sprites dos personagens
-    │   ├── Bartender/     # Sprites dos bartenders
-    │   ├── Client/        # Sprites dos clientes
-    ├── Enviroment/        # Sprites dos elementos do ambiente
-    ├── GUI/               # Sprites da interface gráfica (GUI)
-    └── Items/             # Sprites dos itens
-        ├── HighBall/      # Sprites para copos HighBall
-        ├── LittleBottle/  # Sprites para garrafas pequenas
-        ├── MartiniGlass/  # Sprites para copos Martini
-        └── Poco Grande Glass/  # Sprites para copos Poco Grande
-
 ## Ferramentas e Tecnologias
 
 - **Unity 2022** – Motor de jogo utilizado para o desenvolvimento.
